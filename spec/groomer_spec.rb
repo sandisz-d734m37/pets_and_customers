@@ -39,11 +39,13 @@ describe Groomer do
 
   rico = Pet.new({name: "Rico", type: :dog, age: 3})
   rocco = Pet.new({name: "Rocco", type: :dog, age: 4})
+  lucy = Pet.new({name: "Lucy", type: :cat, age: 45})
 
   it "can count pets" do
     expect(marco.count_pets(:dog)).to eq(0)
     hendrixx.adopt(rico)
     bobby.adopt(rocco)
+    bobby.adopt(lucy)
     expect(marco.count_pets(:dog)).to eq(2)
   end
 end
