@@ -6,4 +6,8 @@ class Groomer
     @customers = []
   end
 
+  def custy_acquire(custy)
+    customers << custy
+  end
+
 end
