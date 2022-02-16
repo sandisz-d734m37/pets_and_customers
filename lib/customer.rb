@@ -15,4 +15,9 @@ class Customer
   def charge(ammount)
     @outstanding_balance += ammount
   end
+
+  def pay(ammount)
+    @outstanding_balance -= ammount
+  end
+
 end
