@@ -27,4 +27,12 @@ describe Customer do
     expect(joel.pets).to eq([samson, lucy])
   end
 
+  it "can be charged" do
+    expect(joel.outstanding_balance).to eq(0)
+    joel.charge(15)
+    joel.charge(7)
+    expect(joel.outstanding_balance).to eq(22)
+  end
+
+
 end
