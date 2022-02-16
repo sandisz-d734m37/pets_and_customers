@@ -36,4 +36,14 @@ describe Groomer do
     hendrixx.pay(30)
     expect(marco.check_balances).not_to include(hendrixx)
   end
+
+  rico = Pet.new({name: "Rico", type: :dog, age: 3})
+  rocco = Pet.new({name: "Rocco", type: :dog, age: 4})
+
+  it "can count pets" do
+    expect(marco.count_pets(:dog)).to eq(0)
+    hendrixx.adopt(rico)
+    bobby.adopt(rocco)
+    expect(marco.count_pets(:dog)).to eq(2)
+  end
 end
