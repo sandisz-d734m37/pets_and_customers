@@ -1,10 +1,10 @@
 require 'pry'
 class Pet
   attr_reader :name, :type, :age
-  def initialize(*args)
-    @name = args[0].values[0]
-    @type = args[0].values[1]
-    @age = args[0].values[2]
+  def initialize(*info)
+    @name = info[0].values[0]
+    @type = info[0].values[1]
+    @age = info[0].values[2]
     @fed = false
   end
 
